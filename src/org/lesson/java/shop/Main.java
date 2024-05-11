@@ -5,16 +5,18 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
 		Scanner scan = new Scanner(System.in);
+		
+		String inizio = "no";
+		
+		
+			for (inizio.equals("si");inizio.equals("no"); inizio = "no") {
+							
+			System.out.println("\nVuole procedere nel vedere la nostra lista prodotti? (Risponda con Si o No)");
+			inizio = scan.nextLine();
 
-		for (String inizio = "" ; inizio == "No" || inizio == "no";) {
-
-			System.out.println("Benvenuto! Vuole vedere i nostri prodotti disponibili? (Risponda con Si o No)");
-			
-			inizio = scan.nextLine(); 
-
-			if (inizio == "Si" || inizio == "si") {
+			if (inizio.equals("Si") || inizio.equals("si") || inizio.equals("SI") || inizio.equals("sI")) {
 
 				System.out.println("\nScrivi il nome del prodotto di cui vuoi sapere le specifiche...");
 				System.out.println("-Iphone\n" + "-GalaxyS23\n" + "-SamsungTV50\n" + "-LgTV75\n" + "-BoseLink\n");
@@ -53,13 +55,14 @@ public class Main {
 					break;
 				}
 
-			} else {
+			} 
+			else if(inizio.equals("no") || inizio.equals("No") || inizio.equals("nO") || inizio.equals("NO")) {
 				System.out.println("Va bene, Alla prossima allora, Buona giornata!");
+				break;
+			}else {
+				System.out.println("Inserimento errato, riprova...");
 			}
-
 		}
-
 	}
 }
-
 
