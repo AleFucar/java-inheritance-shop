@@ -14,35 +14,36 @@ public class Prodotto {
 		this.marca = marca;
 		this.prezzo = prezzo;
 	}
+	
+	/////////////////////////////////////
+	//////////GETTER AND SETTER/////////
+	///////////////////////////////////
 
 	public String getNome() {
 		return nome;
 	}
 
-	public String setNome(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
-		return nome;
-
 	}
 
 	public String getMarca() {
 		return marca;
 	}
 
-	public String setMarca(String marca) {
+	public void setMarca(String marca) {
 		this.marca = marca;
-		return marca;
 	}
 
 	public double getPrezzo() {
 		return prezzo;
 	}
 
-	public double setPrezzo(double prezzo) {
+	public void setPrezzo(double prezzo) {
 		this.prezzo = prezzo;
-		return prezzo;
-
 	}
+	
+///////////////////////////////////////////////	
 
 	public int getCodice() {
 
@@ -62,7 +63,7 @@ public class Prodotto {
 	public String toString() {
 
 
-		return " Nome: " + nome + "\n Marca: " + marca + "\n Prezzo: " + prezzoIvato() + "€" + "\n Codice Prodotto: " + getCodice();
+		return "Nome: " + nome + "\nMarca: " + marca + "\nPrezzo: " + prezzoIvato() + "€" + "\nCodice Prodotto: " + getCodice();
 	}
 
 }
