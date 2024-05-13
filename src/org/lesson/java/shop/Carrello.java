@@ -2,7 +2,7 @@ package org.lesson.java.shop;
 
 import java.util.Scanner;
 
-public class Main {
+public class Carrello {
 
 	public static void main(String[] args) {
 		
@@ -28,11 +28,19 @@ public class Main {
 				case "Iphone":
 					prodottoScelto = new Smartphone("Iphone 15 Pro", "Iphone", "AAAAAA BB CCCCCC D", 128, 1200);
 					System.out.println(prodottoScelto.toString());
+					
+					ProdottoCarrello prodottoInserito = new ProdottoCarrello(prodottoInput);
+					prodottoInserito.aggiungiProdotto();
+					prodottoInserito.stampaCarrello();					
 					break;
 
 				case "GalaxyS23":
 					prodottoScelto = new Smartphone("Samsung Galaxy s23", "Samsung", "AAAAAA BB CCCCCC D", 254, 1600);
 					System.out.println(prodottoScelto.toString());
+					
+					prodottoInserito = new ProdottoCarrello(prodottoInput);
+					prodottoInserito.aggiungiProdotto();
+					prodottoInserito.stampaCarrello();	
 					break;
 
 				case "SamsungTV50":
@@ -51,7 +59,7 @@ public class Main {
 					break;
 
 				default:
-					System.out.println("Inserimento errato, riprova...");
+					System.out.println("Inserimento nome del prodotto errato, riprova...");
 					break;
 				}
 

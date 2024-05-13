@@ -15,12 +15,17 @@ public class Prodotto {
 		this.prezzo = prezzo;
 	}
 	
+	
+	public Prodotto(String name) {
+		this.nome = name;
+	}
+	
 	/////////////////////////////////////
 	//////////GETTER AND SETTER/////////
 	///////////////////////////////////
 
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
 
 	public void setNome(String nome) {

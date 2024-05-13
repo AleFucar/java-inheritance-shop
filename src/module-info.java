@@ -4,5 +4,5 @@
 /**
  * 
  */
-module InheritanceShop {
+module JavaInheritanceShop {
 }
