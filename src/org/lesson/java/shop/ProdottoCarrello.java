@@ -1,6 +1,7 @@
 package org.lesson.java.shop;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ProdottoCarrello{
 	
@@ -19,22 +20,28 @@ public class ProdottoCarrello{
 		
 	}
 
+	
+	double totalePrezzi;
+	double prezzoUnitario;
 
 	public void aggiungiProdotto(Prodotto prod) {
 			
 		prodottiCarrello.add(prod.getNome());
+		
+		 prezziCarrello.add(prod.getPrezzo());
+			
+		 prezzoUnitario = prezziCarrello.get(0);
+		 
+		totalePrezzi = totalePrezzi + prezzoUnitario;
 
 	}
 	
 	
 	public void stampaCarrello() {
 		
-		int contatoreProdotti = 0;
 		
 		for (int i = 0; i < prodottiCarrello.size(); i++) {
-			System.out.println("Prodotto " + contatoreProdotti + ": " +  prodottiCarrello.get(i));
-			contatoreProdotti++;
-			
+			System.out.println("Prodotto " + i + ": " +  prodottiCarrello.get(i));
 		}
 	}
 	
@@ -44,26 +51,22 @@ public class ProdottoCarrello{
 	////////////////////////////////////
 	
 	
-	double totalePrezzi;
-	double prezzoUnitario;
-	
-	public void aggiungiPrezzoCarrello(Prodotto prod) {
-		
-		 prezziCarrello.add(prod.getPrezzo());
-		
-		 prezzoUnitario = prezziCarrello.get(0);
-		 
-		totalePrezzi = totalePrezzi + prezzoUnitario;
-	}
-	
-	
-	
 	public void stampaPrezzi() {
 			
 		
 			
 			System.out.println("Totale carrello: " + totalePrezzi );
 						
+	}
+	
+	
+	public void svuotaCarrello() {
+			
+			prodottiCarrello.removeAll(prodottiCarrello);
+			
+			totalePrezzi = 0;
+
+		
 	}
 	
 

@@ -34,7 +34,7 @@ public class Carrello {
 					String carrello =  scan.nextLine();
 					if (carrello.equals("Si") || carrello.equals("si") || carrello.equals("sI") || carrello.equals("SI")) {
 						prodottoInserito.aggiungiProdotto(prodottoScelto);
-						prodottoInserito.aggiungiPrezzoCarrello(prodottoScelto);
+
 						
 						
 						
@@ -52,7 +52,6 @@ public class Carrello {
 					carrello =  scan.nextLine();
 					if (carrello.equals("Si") || carrello.equals("si") || carrello.equals("sI") || carrello.equals("SI")) {
 						prodottoInserito.aggiungiProdotto(prodottoScelto);
-						prodottoInserito.aggiungiPrezzoCarrello(prodottoScelto);
 						
 						
 					}else if(carrello.equals("no") || carrello.equals("No") || carrello.equals("nO") || carrello.equals("NO")) {
@@ -69,8 +68,7 @@ public class Carrello {
 					carrello =  scan.nextLine();
 					if (carrello.equals("Si") || carrello.equals("si") || carrello.equals("sI") || carrello.equals("SI")) {
 						prodottoInserito.aggiungiProdotto(prodottoScelto);
-						prodottoInserito.aggiungiPrezzoCarrello(prodottoScelto);
-						
+	
 						
 					}else if(carrello.equals("no") || carrello.equals("No") || carrello.equals("nO") || carrello.equals("NO")) {
 						break;
@@ -86,7 +84,6 @@ public class Carrello {
 					carrello =  scan.nextLine();
 					if (carrello.equals("Si") || carrello.equals("si") || carrello.equals("sI") || carrello.equals("SI")) {
 						prodottoInserito.aggiungiProdotto(prodottoScelto);
-						prodottoInserito.aggiungiPrezzoCarrello(prodottoScelto);
 						
 						
 					}else if(carrello.equals("no") || carrello.equals("No") || carrello.equals("nO") || carrello.equals("NO")) {
@@ -102,9 +99,7 @@ public class Carrello {
 					System.out.println("\nVuoi inserirlo nel carrello?");
 					carrello =  scan.nextLine();
 					if (carrello.equals("Si") || carrello.equals("si") || carrello.equals("sI") || carrello.equals("SI")) {
-						prodottoInserito.aggiungiProdotto(prodottoScelto);
-						prodottoInserito.aggiungiPrezzoCarrello(prodottoScelto);
-						
+						prodottoInserito.aggiungiProdotto(prodottoScelto);				
 						
 					}else if(carrello.equals("no") || carrello.equals("No") || carrello.equals("nO") || carrello.equals("NO")) {
 						break;
@@ -130,9 +125,10 @@ public class Carrello {
 				System.out.println("\nVuoi procedere con l'acquisto?");
 				String acquisto = scan.nextLine();
 				if (acquisto.equals("Si") || acquisto.equals("si") || acquisto.equals("SI") || acquisto.equals("sI")) {
-					
-					
 					System.out.println("Acquisto confermato!");
+					prodottoInserito.svuotaCarrello();
+					
+					
 				}else if(acquisto.equals("no") || acquisto.equals("No") || acquisto.equals("nO") || acquisto.equals("NO")) {
 					System.out.println("Va bene, Alla prossima allora, Buona giornata!");
 				}else {
